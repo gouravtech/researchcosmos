@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research Profile — Your Name</title>
+  <meta name="description" content="Academic profile: publications, projects, news, skills, interests, reviewer roles, books, and blogs." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="icon" href="assets/favicon.png" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <div class="avatar" aria-hidden="true">YN</div>
+        <div class="brand-text">
+          <strong>Your Name</strong>
+          <span>Researcher • University / Lab</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <button id="themeToggle" class="btn btn-ghost" aria-label="Toggle theme">🌓</button>
+        <a href="#intro" class="nav-link">Introduction</a>
+        <a href="#papers" class="nav-link">Papers</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#news" class="nav-link">News</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#interests" class="nav-link">Interests</a>
+        <a href="#reviewer" class="nav-link">Reviewer</a>
+        <a href="#books" class="nav-link">Books</a>
+        <a href="#blogs" class="nav-link">Blogs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Intro -->
+    <section id="intro" class="section">
+      <div class="container grid-2">
+        <div>
+          <h1 class="h1">Hi, I'm <span class="accent">Your Name</span> 👋</h1>
+          <p>
+            I am a PhD candidate at <em>Your University</em> in the <em>Your Lab</em>.
+            My work focuses on <strong>Clinical Decision Support Systems</strong>, data interoperability,
+            and <strong>Generative AI</strong> for healthcare.
+          </p>
+          <ul class="contact">
+            <li>📧 <a href="mailto:you@email.com">you@email.com</a></li>
+            <li>🧪 <a href="#" target="_blank" rel="noopener">Google Scholar</a></li>
+            <li>🆔 <a href="#" target="_blank" rel="noopener">ORCID</a></li>
+            <li>💼 <a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li>🐙 <a href="#" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn" href="#papers">View Publications</a>
+            <a class="btn btn-ghost" href="#projects">Explore Projects</a>
+          </div>
+        </div>
+        <div>
+          <div class="hero-card">
+            <img src="assets/hero-placeholder.jpg" alt="Research illustration" />
+            <div class="hero-caption">Current focus: CDSS portability • Healthcare AI</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Papers -->
+    <section id="papers" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2">Research Papers & Conferences</h2>
+          <div class="filters">
+            <input id="paperSearch" type="search" placeholder="Search title, venue, year…" aria-label="Search papers" />
+            <select id="paperYear" aria-label="Filter by year">
+              <option value="">All years</option>
+              <option>2025</option>
+              <option>2024</option>
+              <option>2023</option>
+            </select>
+            <select id="paperType" aria-label="Filter by type">
+              <option value="">All types</option>
+              <option value="journal">Journal</option>
+              <option value="conference">Conference</option>
+              <option value="preprint">Preprint</option>
+            </select>
+          </div>
+        </div>
+
+        <ul id="paperList" class="card-list">
+          <li class="card" data-year="2025" data-type="conference">
+            <div class="card-body">
+              <div class="card-meta">Conference • 2025</div>
+              <h3 class="h3">Portable CDSS Across Healthcare Providers</h3>
+              <p class="muted">MedInfo 2025, Taipei • <span class="tag">CDSS</span> <span class="tag">Interoperability</span></p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#" target="_blank" rel="noopener">PDF</a>
+                <a class="btn btn-sm btn-ghost" href="#" target="_blank" rel="noopener">DOI</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="card" data-year="2024" data-type="journal">
+            <div class="card-body">
+              <div class="card-meta">Journal • 2024</div>
+              <h3 class="h3">Graph-Based Retrieval for Discharge Summaries</h3>
+              <p class="muted">Journal of Biomedical Informatics • <span class="tag">Graph RAG</span> <span class="tag">NLP</span></p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#" target="_blank" rel="noopener">PDF</a>
+                <a class="btn btn-sm btn-ghost" href="#" target="_blank" rel="noopener">DOI</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="card" data-year="2023" data-type="preprint">
+            <div class="card-body">
+              <div class="card-meta">Preprint • 2023</div>
+              <h3 class="h3">Ontology-Aware Adaptation of Clinical Models</h3>
+              <p class="muted">arXiv • <span class="tag">Ontology</span> <span class="tag">SNOMED-CT</span></p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#" target="_blank" rel="noopener">PDF</a>
+                <a class="btn btn-sm btn-ghost" href="#" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2">Projects</h2>
+          <div class="filters">
+            <input id="projectSearch" type="search" placeholder="Search projects…" aria-label="Search projects" />
+            <select id="projectTag" aria-label="Filter by tag">
+              <option value="">All tags</option>
+              <option>LLM</option>
+              <option>CDSS</option>
+              <option>RAG</option>
+              <option>Ontology</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="projectGrid" class="grid-3">
+          <article class="card project" data-tags="LLM,CDSS">
+            <img src="assets/proj-1.jpg" alt="AI Discharge Summary" />
+            <div class="card-body">
+              <h3 class="h3">AI Discharge Summary Generator</h3>
+              <p class="muted">On-prem LLMs integrated with REDCap for clinical narratives.</p>
+              <div class="chip-row">
+                <span class="chip">LLM</span><span class="chip">CDSS</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn btn-sm btn-ghost" href="#" target="_blank" rel="noopener">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project" data-tags="RAG,Ontology">
+            <img src="assets/proj-2.jpg" alt="Graph RAG" />
+            <div class="card-body">
+              <h3 class="h3">Graph-Powered Clinical Retrieval</h3>
+              <p class="muted">Combines ontologies with RAG for precise evidence retrieval.</p>
+              <div class="chip-row">
+                <span class="chip">RAG</span><span class="chip">Ontology</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn btn-sm btn-ghost" href="#" target="_blank" rel="noopener">Poster</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project" data-tags="LLM">
+            <img src="assets/proj-3.jpg" alt="Evaluation Toolkit" />
+            <div class="card-body">
+              <h3 class="h3">LLM Evaluation Toolkit</h3>
+              <p class="muted">Reproducible metrics: faithfulness, groundedness, and bias checks.</p>
+              <div class="chip-row">
+                <span class="chip">LLM</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn btn-sm btn-ghost" href="#" target="_blank" rel="noopener">Docs</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section id="news" class="section alt">
+      <div class="container">
+        <h2 class="h2">News & Updates</h2>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <time>Aug 2025</time>
+              <h3 class="h4">Presented at MedInfo 2025 (Taipei)</h3>
+              <p>Gave a talk on CDSS portability across healthcare providers.</p>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <time>Jul 2025</time>
+              <h3 class="h4">New preprint on Graph RAG</h3>
+              <p>Released arXiv preprint on graph-augmented retrieval for clinical text.</p>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <time>Mar 2025</time>
+              <h3 class="h4">Workshop organization</h3>
+              <p>Co-organized a workshop on interoperable AI for healthcare systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="h2">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill">
+            <div class="skill-top">
+              <span>Python</span><span class="skill-level">Expert</span>
+            </div>
+            <div class="bar"><span style="width:90%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top">
+              <span>PySpark</span><span class="skill-level">Advanced</span>
+            </div>
+            <div class="bar"><span style="width:80%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top">
+              <span>TensorFlow / PyTorch</span><span class="skill-level">Advanced</span>
+            </div>
+            <div class="bar"><span style="width:80%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top">
+              <span>Ontology (SNOMED-CT, ICD-10-AM)</span><span class="skill-level">Advanced</span>
+            </div>
+            <div class="bar"><span style="width:85%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top">
+              <span>Bayesian Networks</span><span class="skill-level">Intermediate</span>
+            </div>
+            <div class="bar"><span style="width:65%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests -->
+    <section id="interests" class="section alt">
+      <div class="container">
+        <h2 class="h2">Research Interests</h2>
+        <div class="chip-row">
+          <span class="chip">Clinical Decision Support</span>
+          <span class="chip">Healthcare Interoperability</span>
+          <span class="chip">Generative AI</span>
+          <span class="chip">Knowledge Graphs</span>
+          <span class="chip">Evaluation & Safety</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviewer Roles -->
+    <section id="reviewer" class="section">
+      <div class="container">
+        <h2 class="h2">Reviewer Roles</h2>
+        <ul class="card-list">
+          <li class="card">
+            <div class="card-body">
+              <div class="card-meta">Journal • 2024</div>
+              <h3 class="h3">JAMIA – Journal of the American Medical Informatics Association</h3>
+              <p class="muted">Reviewed manuscripts in Clinical Decision Support Systems and Healthcare AI.</p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card-body">
+              <div class="card-meta">Conference • 2025</div>
+              <h3 class="h3">MedInfo 2025</h3>
+              <p class="muted">Program Committee Reviewer for CDSS track.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Books -->
+    <section id="books" class="section alt">
+      <div class="container">
+        <h2 class="h2">Books</h2>
+        <div class="grid-3">
+          <article class="card project">
+            <img src="assets/book-1.jpg" alt="Practical Machine Learning using Apache Spark book cover" />
+            <div class="card-body">
+              <h3 class="h3">Practical Machine Learning using Apache Spark</h3>
+              <p class="muted">Published on Amazon (2021). 4★ rating. Covers MLlib, pipelines, and healthcare case studies.</p>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#" target="_blank" rel="noopener">Amazon</a>
+                <a class="btn btn-sm btn-ghost" href="#" target="_blank" rel="noopener">Sample PDF</a>
+              </div>
+            </div>
+          </article>
+          <!-- Add more books as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- LinkedIn Blogs -->
+    <section id="blogs" class="section">
+      <div class="container">
+        <h2 class="h2">LinkedIn Blogs</h2>
+        <ul class="card-list">
+          <li class="card">
+            <div class="card-body">
+              <div class="card-meta">Jul 2025</div>
+              <h3 class="h3"><a href="#" target="_blank" rel="noopener">Healthcare AI: Challenges of Interoperability</a></h3>
+              <p class="muted">Exploring barriers and enablers for CDSS portability in healthcare.</p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card-body">
+              <div class="card-meta">May 2025</div>
+              <h3 class="h3"><a href="#" target="_blank" rel="noopener">Why Evaluation of LLMs in Healthcare is Broken</a></h3>
+              <p class="muted">Discusses the limitations of LLM-as-a-Judge and proposes alternatives.</p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card-body">
+              <div class="card-meta">Jan 2025</div>
+              <h3 class="h3"><a href="#" target="_blank" rel="noopener">Graph RAG for Discharge Summaries</a></h3>
+              <p class="muted">How graph-augmented retrieval improves clinical document generation.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Your Name</span>
+      <span class="sep">•</span>
+      <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
