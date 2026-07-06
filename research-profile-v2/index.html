@@ -4,10 +4,514 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research Profile — Gourav Gupta</title>
-  <meta name="description" content="Academic profile: publications, projects, news, skills, interests, reviewer roles, books, and blogs." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preload" href="style.css" as="style" />
+  <meta name="description" content="Research profile of Gourav Gupta: CDSS redeployment, healthcare interoperability, Generative AI, clinical informatics, publications, projects, experience and reviewer roles." />
   <link rel="icon" href="assets/1684125196895.jpg" />
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --panel-soft: #f1f5f9;
+      --text: #172033;
+      --muted: #64748b;
+      --border: #dbe3ef;
+      --accent: #2563eb;
+      --accent-2: #14b8a6;
+      --accent-soft: #dbeafe;
+      --shadow: 0 16px 45px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max-width: 1180px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --panel: #111c33;
+      --panel-soft: #17243d;
+      --text: #eef4ff;
+      --muted: #b8c4d8;
+      --border: #263852;
+      --accent: #60a5fa;
+      --accent-2: #2dd4bf;
+      --accent-soft: rgba(96, 165, 250, 0.15);
+      --shadow: 0 16px 45px rgba(0, 0, 0, 0.28);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.10), transparent 32%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 76px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: max-content;
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-text strong { display: block; line-height: 1.1; }
+    .brand-text span { color: var(--muted); font-size: 0.88rem; }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-link, .btn, .chip, .tag, .filter-btn {
+      border-radius: 999px;
+      transition: 180ms ease;
+    }
+
+    .nav-link {
+      padding: 8px 11px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--text);
+      background: var(--accent-soft);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid transparent;
+      background: var(--accent);
+      color: white;
+      padding: 11px 16px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.20);
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+    .btn-ghost {
+      background: var(--panel);
+      color: var(--text);
+      border-color: var(--border);
+      box-shadow: none;
+    }
+    .btn-sm { padding: 8px 12px; font-size: 0.88rem; }
+
+    .section { padding: 76px 0; }
+    .section.alt { background: color-mix(in srgb, var(--panel-soft) 72%, transparent); }
+
+    .hero {
+      padding-top: 44px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      background: var(--panel);
+      font-size: 0.92rem;
+      margin-bottom: 16px;
+    }
+
+    .h1, .h2, .h3, .h4 { line-height: 1.18; margin: 0; }
+    .h1 { font-size: clamp(2.15rem, 5vw, 4.8rem); letter-spacing: -0.055em; }
+    .h2 { font-size: clamp(1.75rem, 3vw, 2.55rem); letter-spacing: -0.035em; }
+    .h3 { font-size: 1.15rem; letter-spacing: -0.015em; }
+    .h4 { font-size: 1rem; }
+    .accent { color: var(--accent); }
+    .lead { font-size: 1.09rem; color: var(--muted); max-width: 760px; margin: 18px 0 0; }
+    .muted { color: var(--muted); }
+
+    .cta-row, .contact, .chip-row, .card-actions, .filters, .summary-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .cta-row { margin-top: 24px; }
+    .contact {
+      padding: 0;
+      margin: 24px 0 0;
+      list-style: none;
+    }
+
+    .contact a, .inline-link {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .hero-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      max-width: 320px;
+      margin-left: auto;
+    }
+
+    .hero-card img {
+      width: 185px;
+      height: 185px;
+      object-fit: cover;
+      border-radius: 24px;
+      margin: 0 auto 14px;
+      border: 4px solid var(--panel-soft);
+    }
+
+    .hero-caption {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .summary-card, .card, .experience-card, .focus-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .summary-card {
+      padding: 18px;
+    }
+
+    .summary-card strong {
+      display: block;
+      font-size: 1.6rem;
+      line-height: 1.1;
+      color: var(--accent);
+    }
+
+    .summary-card span {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .section-head p { margin: 8px 0 0; color: var(--muted); max-width: 720px; }
+
+    .filters input, .filters select {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--text);
+      padding: 11px 13px;
+      border-radius: 999px;
+      outline: none;
+      min-width: 190px;
+    }
+
+    .filter-strip {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: -10px 0 24px;
+    }
+
+    .filter-btn {
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: var(--panel);
+      padding: 8px 12px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .card-list {
+      display: grid;
+      gap: 16px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .card {
+      overflow: hidden;
+    }
+
+    .card-body { padding: 21px; }
+    .card-meta {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .tag, .chip {
+      display: inline-flex;
+      align-items: center;
+      background: var(--accent-soft);
+      color: color-mix(in srgb, var(--accent) 84%, var(--text));
+      padding: 5px 9px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin: 3px 2px;
+    }
+
+    .chip { background: var(--panel-soft); color: var(--muted); }
+    .card-actions { margin-top: 16px; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .project img {
+      width: 100%;
+      height: 158px;
+      object-fit: cover;
+      background: var(--panel-soft);
+    }
+
+    .project .card-body {
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project .card-actions { margin-top: auto; }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .focus-card {
+      padding: 18px;
+    }
+
+    .focus-card .number {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 16px;
+    }
+
+    .tl-item {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .tl-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: 22px;
+      box-shadow: 0 0 0 8px var(--accent-soft);
+    }
+
+    .tl-content {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+    }
+
+    .tl-content time {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 0.86rem;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .experience-card {
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .experience-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 5px;
+      background: linear-gradient(var(--accent), var(--accent-2));
+    }
+
+    .experience-card h3 { margin-left: 4px; }
+    .experience-card ul { margin: 14px 0 0; padding-left: 20px; color: var(--muted); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .skill {
+      padding: 16px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .skill-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .skill-level { color: var(--muted); font-weight: 600; font-size: 0.9rem; }
+    .bar {
+      height: 9px;
+      background: var(--panel-soft);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      border-radius: inherit;
+    }
+
+    details {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 15px 18px;
+      box-shadow: var(--shadow);
+    }
+
+    details + details { margin-top: 12px; }
+    summary { cursor: pointer; font-weight: 800; }
+    details p { color: var(--muted); margin-bottom: 0; }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 26px 0;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .back-to-top { color: var(--accent); font-weight: 800; }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 980px) {
+      .hero-grid, .experience-grid, .skills-grid { grid-template-columns: 1fr; }
+      .hero-card { margin: 0; max-width: 280px; }
+      .summary-grid { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .focus-grid { grid-template-columns: repeat(2, 1fr); }
+      .section-head { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (max-width: 680px) {
+      .nav { display: none; }
+      .section { padding: 52px 0; }
+      .summary-grid, .grid-3, .focus-grid { grid-template-columns: 1fr; }
+      .filters input, .filters select { width: 100%; }
+      .hero-card img { width: 150px; height: 150px; }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" id="top">
@@ -16,432 +520,425 @@
         <div class="avatar" aria-hidden="true">GG</div>
         <div class="brand-text">
           <strong>Gourav Gupta</strong>
-          <span>Researcher • University / Lab</span>
+          <span>PhD Researcher • Healthcare AI • CDSS Redeployment</span>
         </div>
       </a>
-      <nav class="nav">
-        <button id="themeToggle" class="btn btn-ghost" aria-label="Toggle theme">🌓</button>
-        <a href="#intro" class="nav-link">Introduction</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <button id="themeToggle" class="btn btn-ghost btn-sm" aria-label="Toggle dark mode">🌓</button>
+        <a href="#intro" class="nav-link">About</a>
+        <a href="#focus" class="nav-link">Framework</a>
         <a href="#papers" class="nav-link">Papers</a>
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#news" class="nav-link">News</a>
+        <a href="#experience" class="nav-link">Experience</a>
         <a href="#skills" class="nav-link">Skills</a>
-        <a href="#interests" class="nav-link">Interests</a>
         <a href="#reviewer" class="nav-link">Reviewer</a>
-        <a href="#books" class="nav-link">Books</a>
         <a href="#blogs" class="nav-link">Blogs</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Intro -->
-    <section id="intro" class="section">
-      <div class="container grid-2">
+    <section id="intro" class="section hero">
+      <div class="container hero-grid">
         <div>
-          <h1 class="h1">Hi, I'm <span class="accent">Gourav Gupta</span> 👋</h1>
-          <p>
-            I am a Research Scholar in <em>Digital Health Innovation and Clinical Informatics Lab (DHICI Lab)</em> from  <em>University of South Australia (to be Adelaide University)</em>.
-            My work focuses on <strong>Clinical Decision Support Systems</strong>, data interoperability,
-            and <strong>Generative AI</strong> for healthcare.
+          <div class="eyebrow">Digital Health Innovation and Clinical Informatics Lab • University of South Australia</div>
+          <h1 class="h1">Researching how <span class="accent">Clinical Decision Support Systems</span> can be safely redeployed across healthcare environments.</h1>
+          <p class="lead">
+            I am a PhD researcher working at the intersection of clinical decision support, healthcare interoperability, medical coding, knowledge graphs, Generative AI and multi-agent systems. My research focuses on identifying how clinical variables differ across source and target healthcare ecosystems and how those differences can be represented, validated and adapted.
           </p>
-          <ul class="contact">
-            <li>📧 <a href="gourav.gupta@mymail.unisa.edu.au">Mail</a></li>
+          <ul class="contact" aria-label="Profile links">
+            <li>📧 <a href="mailto:gourav.gupta@mymail.unisa.edu.au">Email</a></li>
             <li>🧪 <a href="https://scholar.google.com.au/citations?user=agy6Wz8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
             <li>🆔 <a href="https://orcid.org/0000-0003-3122-1976" target="_blank" rel="noopener">ORCID</a></li>
             <li>💼 <a href="https://www.linkedin.com/in/gourav-g-8929a560/" target="_blank" rel="noopener">LinkedIn</a></li>
             <li>🐙 <a href="#" target="_blank" rel="noopener">GitHub</a></li>
           </ul>
           <div class="cta-row">
-            <a class="btn" href="#papers">View Publications</a>
-            <a class="btn btn-ghost" href="#projects">Explore Projects</a>
+            <a class="btn" href="#papers">View publications</a>
+            <a class="btn btn-ghost" href="#projects">Explore projects</a>
+            <button class="btn btn-ghost" id="copyEmail" type="button">Copy email</button>
           </div>
         </div>
-        <div>
-          <div class="hero-card">
-            <img src="assets/1684125196895.jpg" alt="Research illustration" />
-            <div class="hero-caption">Research Domain: CDSS portability • Healthcare interoperability • Medical coding • Ontology • Large Language Models • Multi-agent systems (MAS) </div>
+        <aside class="hero-card" aria-label="Profile summary card">
+          <img src="assets/1684125196895.jpg" alt="Gourav Gupta profile photo" />
+          <div class="hero-caption">
+            CDSS portability • Healthcare interoperability • Medical coding • Clinical graph validation • GenAI • GraphRAG • Multi-agent systems
           </div>
+        </aside>
+      </div>
+      <div class="container summary-grid" aria-label="Research highlights">
+        <div class="summary-card"><strong>9+</strong><span>years in AI, analytics, research and applied industry projects</span></div>
+        <div class="summary-card"><strong>5</strong><span>SMD dimensions for CDSS redeployment and variable comparison</span></div>
+        <div class="summary-card"><strong>30+</strong><span>expert survey participants supporting qualitative validation</span></div>
+        <div class="summary-card"><strong>Standards</strong><span>FHIR, openEHR, OMOP, LOINC, SNOMED CT, UMLS, UCUM, ICD coding</span></div>
+      </div>
+    </section>
+
+    <section id="focus" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="h2">Research Focus: VarDiff and SMD Framework</h2>
+            <p>My core PhD contribution is a structured way to compare clinical variables before redeploying a CDSS into a new healthcare environment.</p>
+          </div>
+          <div class="summary-actions">
+            <a class="btn btn-sm" href="https://www.mdpi.com/2076-3417/16/7/3331" target="_blank" rel="noopener">Read VarDiff</a>
+            <a class="btn btn-sm btn-ghost" href="https://doi.org/10.3390/app16073331" target="_blank" rel="noopener">DOI</a>
+          </div>
+        </div>
+        <div class="focus-grid">
+          <article class="focus-card">
+            <div class="number">1</div>
+            <h3 class="h3">Shallow Match</h3>
+            <p class="muted">Checks labels, synonyms and terminology alignment using data dictionaries and standards.</p>
+          </article>
+          <article class="focus-card">
+            <div class="number">2</div>
+            <h3 class="h3">Deep Match</h3>
+            <p class="muted">Compares clinical definitions, meaning and variable intent beyond the label.</p>
+          </article>
+          <article class="focus-card">
+            <div class="number">3</div>
+            <h3 class="h3">Representation Match</h3>
+            <p class="muted">Assesses unit, datatype, scale, category and value representation differences.</p>
+          </article>
+          <article class="focus-card">
+            <div class="number">4</div>
+            <h3 class="h3">Metadata Match</h3>
+            <p class="muted">Examines context such as device, timing, sample type, posture and measurement conditions.</p>
+          </article>
+          <article class="focus-card">
+            <div class="number">5</div>
+            <h3 class="h3">Data Match</h3>
+            <p class="muted">Looks at population mix, distributions, missingness and data-level behaviour across environments.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Papers -->
-    <section id="papers" class="section alt">
+    <section id="papers" class="section">
       <div class="container">
         <div class="section-head">
-          <h2 class="h2">Research Papers & Conferences</h2>
+          <div>
+            <h2 class="h2">Research Papers & Conferences</h2>
+            <p>Search or filter publications by year and type.</p>
+          </div>
           <div class="filters">
-            <input id="paperSearch" type="search" placeholder="Search title, venue, year…" aria-label="Search papers" />
-            <select id="paperYear" aria-label="Filter by year">
+            <input id="paperSearch" type="search" placeholder="Search papers…" aria-label="Search papers" />
+            <select id="paperYear" aria-label="Filter papers by year">
               <option value="">All years</option>
+              <option>2026</option>
               <option>2025</option>
               <option>2024</option>
-              <option>2023</option>
             </select>
-            <select id="paperType" aria-label="Filter by type">
+            <select id="paperType" aria-label="Filter papers by type">
               <option value="">All types</option>
               <option value="journal">Journal</option>
               <option value="conference">Conference</option>
-              <option value="preprint">Preprint</option>
+              <option value="manuscript">Manuscript</option>
             </select>
           </div>
         </div>
 
         <ul id="paperList" class="card-list">
-          <li class="card" data-year="2025" data-type="conference">
-            <div class="card-body">
-              <div class="card-meta">Conference • 2025</div>
-              <h3 class="h3">Clinical Decision Support Systems Redeployment – Levels of Matching Between Variables in Different Ecosystems</h3>
-              <p class="muted">MedInfo 2025, Taipei • <span class="tag">CDSS</span> <span class="tag">Interoperability</span></p>
-              <div class="card-actions">
-                <a class="btn btn-sm" href="https://ebooks.iospress.nl/doi/10.3233/SHTI251136" target="_blank" rel="noopener">PDF</a>
-                <a class="btn btn-sm btn-ghost" href="10.3233/SHTI251136" target="_blank" rel="noopener">DOI</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="card" data-year="2024" data-type="journal">
-            <div class="card-body">
-              <div class="card-meta">Conference • 2024</div>
-              <h3 class="h3">Adaptive Semantic Framework for CDSS to a new environment</h3>
-              <p class="muted">ACSW 24: Proceedings of the 2024 Australasian Computer Science Week <span class="tag">Clinical Decision Support System, Causal Functionality, Data-Driven Elements, Hybrid Adaptation Strategies, Knowledge Base System</span> <span class="tag">NLP</span></p>
-              <div class="card-actions">
-                <a class="btn btn-sm" href="https://dl.acm.org/doi/abs/10.1145/3641142.3641159" target="_blank" rel="noopener">PDF</a>
-                <a class="btn btn-sm btn-ghost" href="https://dl.acm.org/doi/abs/10.1145/3641142.3641159" target="_blank" rel="noopener">DOI</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="card" data-year="2026" data-type="journal">
+          <li class="card paper-card" data-year="2026" data-type="journal">
             <div class="card-body">
               <div class="card-meta">Journal • Applied Sciences • 2026</div>
               <h3 class="h3">VarDiff: A Conceptual Model for Representing Variable Differences Between Clinical Decision Support Systems</h3>
-              <p class="muted">
-                Applied Sciences, 16(7), 3331 • This paper presents VarDiff, a structured multi-dimensional framework for analysing variable-level differences during CDSS redeployment. It formalises differential dimensions, differential possibilities, and workflows for comparing clinical variables within a single environment or across source and target healthcare ecosystems.
-                <span class="tag">CDSS Redeployment</span>
-                <span class="tag">Variable Differences</span>
-                <span class="tag">Differential Dimensions</span>
-                <span class="tag">Interoperability</span>
-                <span class="tag">SNOMED CT</span>
-              </p>
+              <p class="muted">Presents VarDiff, a structured multi-dimensional framework for representing and analysing variable-level differences during CDSS redeployment. It defines differential dimensions, differential possibilities and workflow guidance for comparing variables within one environment or across source and target healthcare ecosystems.</p>
+              <div class="chip-row">
+                <span class="tag">CDSS Redeployment</span><span class="tag">Variable Differences</span><span class="tag">Differential Dimensions</span><span class="tag">Interoperability</span><span class="tag">SNOMED CT</span>
+              </div>
               <div class="card-actions">
-                <a class="btn btn-sm" href="https://www.mdpi.com/2076-3417/16/7/3331" target="_blank" rel="noopener">PDF</a>
+                <a class="btn btn-sm" href="https://www.mdpi.com/2076-3417/16/7/3331" target="_blank" rel="noopener">PDF / Paper</a>
                 <a class="btn btn-sm btn-ghost" href="https://doi.org/10.3390/app16073331" target="_blank" rel="noopener">DOI</a>
               </div>
             </div>
           </li>
+
+          <li class="card paper-card" data-year="2026" data-type="manuscript">
+            <div class="card-body">
+              <div class="card-meta">Research Manuscript • 2026</div>
+              <h3 class="h3">Validation of Qualitative Analysis of the Structured Multi-Dimensional Framework for CDSS Redeployment</h3>
+              <p class="muted">Validates the qualitative analysis of the SMD framework using expert survey and interview evidence. The paper examines the relevance, completeness, ordering and practical applicability of shallow match, deep match, representation match, metadata match and data distribution match.</p>
+              <div class="chip-row">
+                <span class="tag">Qualitative Validation</span><span class="tag">SMD Framework</span><span class="tag">HITL Validation</span><span class="tag">Clinical Informatics</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="#projects">Related Project</a>
+                <a class="btn btn-sm btn-ghost" href="#focus">Framework</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="card paper-card" data-year="2025" data-type="conference">
+            <div class="card-body">
+              <div class="card-meta">Conference • MedInfo • 2025</div>
+              <h3 class="h3">Clinical Decision Support Systems Redeployment – Levels of Matching Between Variables in Different Ecosystems</h3>
+              <p class="muted">Describes five levels of matching required for CDSS redeployment: shallow, deep, representation, metadata and data match. The paper explains why simple transfer between healthcare organisations is often not viable without structured difference analysis.</p>
+              <div class="chip-row">
+                <span class="tag">CDSS</span><span class="tag">Interoperability</span><span class="tag">Variable Matching</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="https://ebooks.iospress.nl/doi/10.3233/SHTI251136" target="_blank" rel="noopener">Paper</a>
+                <a class="btn btn-sm btn-ghost" href="https://doi.org/10.3233/SHTI251136" target="_blank" rel="noopener">DOI</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="card paper-card" data-year="2024" data-type="conference">
+            <div class="card-body">
+              <div class="card-meta">Conference • ACSW / HIKM • 2024</div>
+              <h3 class="h3">Adaptive Semantic Framework for CDSS to a New Environment</h3>
+              <p class="muted">Proposes an Adaptive Semantic Framework for adapting CDSSs to changing environments by combining knowledge-based systems, data-driven elements and hybrid adaptation strategies.</p>
+              <div class="chip-row">
+                <span class="tag">Adaptive Semantic Framework</span><span class="tag">CDSS</span><span class="tag">Knowledge-Based Systems</span><span class="tag">NLP</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn btn-sm" href="https://dl.acm.org/doi/abs/10.1145/3641142.3641159" target="_blank" rel="noopener">Paper</a>
+                <a class="btn btn-sm btn-ghost" href="https://doi.org/10.1145/3641142.3641159" target="_blank" rel="noopener">DOI</a>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
+    <section id="projects" class="section alt">
       <div class="container">
         <div class="section-head">
-          <h2 class="h2">Projects</h2>
+          <div>
+            <h2 class="h2">Projects</h2>
+            <p>Applied projects across healthcare AI, clinical informatics, graph AI, interoperability and Generative AI.</p>
+          </div>
           <div class="filters">
             <input id="projectSearch" type="search" placeholder="Search projects…" aria-label="Search projects" />
-            <select id="projectTag" aria-label="Filter by tag">
-              <option value="">All tags</option>
-              <option>LLM</option>
-              <option>CDSS</option>
-              <option>RAG</option>
-              <option>Ontology</option>
-              <option>Interoperability</option>
-            </select>
           </div>
+        </div>
+        <div class="filter-strip" aria-label="Project category filters">
+          <button class="filter-btn active" data-filter="all" type="button">All</button>
+          <button class="filter-btn" data-filter="CDSS" type="button">CDSS</button>
+          <button class="filter-btn" data-filter="Interoperability" type="button">Interoperability</button>
+          <button class="filter-btn" data-filter="GenAI" type="button">GenAI</button>
+          <button class="filter-btn" data-filter="Graph" type="button">Graph</button>
+          <button class="filter-btn" data-filter="Validation" type="button">Validation</button>
         </div>
 
         <div id="projectGrid" class="grid-3">
-          <article class="card project" data-tags="LLM,CDSS">
-            <img src="assets/ChatGPT Image Oct 10, 2025, 06_07_40 PM.png" alt="AI Discharge Summary" />
+          <article class="card project" data-tags="CDSS,GenAI,Graph,RAG,Bayesian">
+            <img src="assets/ChatGPT Image Oct 10, 2025, 06_07_40 PM.png" alt="Causal Bayesian network and diabetic patient AI project" />
             <div class="card-body">
+              <div class="card-meta">Healthcare AI</div>
               <h3 class="h3">Temporal Understanding of Causal Bayesian Network for Diabetic Patient</h3>
-              <p class="muted">Integrated Explainable AI, Causal Bayesian Network, & GraphRAG</p>
-              <div class="chip-row">
-                <span class="chip">LLM</span><span class="chip">CDSS</span>
-              </div>
-              <div class="card-actions">
-                <a class="btn btn-sm" href="#" target="_blank" rel="noopener">GitHub</a>
-                <a class="btn btn-sm btn-ghost" href="#" target="_blank" rel="noopener">Demo</a>
-              </div>
+              <p class="muted">Integrated explainable AI, causal Bayesian networks and GraphRAG to support temporal reasoning and patient-specific decision support.</p>
+              <div class="chip-row"><span class="chip">CDSS</span><span class="chip">GraphRAG</span><span class="chip">Bayesian Network</span></div>
+              <div class="card-actions"><a class="btn btn-sm" href="#papers">Research</a><a class="btn btn-sm btn-ghost" href="#skills">Skills</a></div>
             </div>
           </article>
 
-          <article class="card project" data-tags="CDSS,Ontology,Interoperability,FHIR,openEHR,OMOP,LOINC,SNOMED CT">
-            <img src="assets/ChatGPT Image Oct 10, 2025, 06_12_15 PM.png" alt="Healthcare interoperability and coding standards" />
+          <article class="card project" data-tags="CDSS,Interoperability,FHIR,openEHR,OMOP,LOINC,SNOMED CT,Medical Coding">
+            <img src="assets/ChatGPT Image Oct 10, 2025, 06_12_15 PM.png" alt="Healthcare interoperability and medical coding project" />
             <div class="card-body">
+              <div class="card-meta">Interoperability</div>
               <h3 class="h3">Healthcare Interoperability, Standardisation and Medical Coding</h3>
-              <p class="muted">Applied HL7 FHIR, openEHR, OMOP CDM, LOINC, SNOMED CT, UMLS, UCUM, ICD-10-AM and SNOMED CT-AU/SNOMED CT-AM concepts to support CDSS redeployment, terminology mapping, variable standardisation, metadata alignment, unit conversion, data-dictionary checking and interoperable clinical workflows.</p>
-              <div class="chip-row">
-                <span class="chip">FHIR</span><span class="chip">openEHR</span><span class="chip">OMOP</span><span class="chip">LOINC</span><span class="chip">SNOMED CT</span>
-              </div>
-              <div class="card-actions">
-                <a class="btn btn-sm" href="#papers">Related Papers</a>
-                <a class="btn btn-sm btn-ghost" href="#skills">Skills</a>
-              </div>
+              <p class="muted">Experience with HL7 FHIR, openEHR, OMOP CDM, LOINC, SNOMED CT, UMLS, UCUM, ICD-10-AM and SNOMED CT-AU/AM for CDSS redeployment, terminology mapping, unit conversion, data-dictionary checking, metadata alignment and interoperable clinical workflows.</p>
+              <div class="chip-row"><span class="chip">FHIR</span><span class="chip">openEHR</span><span class="chip">OMOP</span><span class="chip">LOINC</span><span class="chip">SNOMED CT</span></div>
+              <div class="card-actions"><a class="btn btn-sm" href="#focus">Framework</a><a class="btn btn-sm btn-ghost" href="#skills">Standards</a></div>
             </div>
           </article>
 
-          <article class="card project" data-tags="RAG,Ontology">
-            <img src="assets/ChatGPT Image Oct 10, 2025, 06_09_36 PM.png" alt="Graph RAG" />
+          <article class="card project" data-tags="GenAI,Graph,Validation,CDSS,Ontology">
+            <img src="assets/ChatGPT Image Oct 10, 2025, 06_09_36 PM.png" alt="Clinical graph validation using weighted score" />
             <div class="card-body">
-              <h3 class="h3">EEG interpretation using Large Language Model and Digital Human</h3>
-              <p class="muted">Integrating LLMs, knowledge bases and speech models to interpret EEG patterns and convert them into patient-understandable sentences</p>
-              <div class="chip-row">
-                <span class="chip">RAG</span><span class="chip">Knowledge Base</span>
-              </div>
-              <div class="card-actions">
-                <a class="btn btn-sm" href="#" target="_blank" rel="noopener">GitHub</a>
-                <a class="btn btn-sm btn-ghost" href="#" target="_blank" rel="noopener">Poster</a>
-              </div>
+              <div class="card-meta">Graph Validation</div>
+              <h3 class="h3">Clinical Graph Validation using Weighted Score</h3>
+              <p class="muted">Collaborative project led by Prach and supported by my knowledge of Generative AI, graph-based clinical representation and clinical informatics. The project validates clinical graphs using weighted scores for concept relevance, node-edge relationships, evidence alignment, semantic consistency and graph-level reliability.</p>
+              <div class="chip-row"><span class="chip">Clinical Graph</span><span class="chip">Weighted Score</span><span class="chip">GenAI</span><span class="chip">Validation</span></div>
+              <div class="card-actions"><a class="btn btn-sm" href="#papers">Related Research</a><a class="btn btn-sm btn-ghost" href="#skills">Graph Skills</a></div>
             </div>
           </article>
 
-          <article class="card project" data-tags="LLM">
-            <img src="assets/ChatGPT Image Oct 10, 2025, 06_12_15 PM.png" alt="Evaluation Toolkit" />
+          <article class="card project" data-tags="GenAI,RAG,Ontology,Digital Human,Healthcare">
+            <img src="assets/ChatGPT Image Oct 10, 2025, 06_09_36 PM.png" alt="EEG interpretation using LLM and digital human" />
             <div class="card-body">
-              <h3 class="h3">LLM Evaluation using deterministic metrics</h3>
-              <p class="muted">Reproducible metrics: faithfulness, groundedness, and bias checks.</p>
-              <div class="chip-row">
-                <span class="chip">LLM</span>
-              </div>
-              <div class="card-actions">
-                <a class="btn btn-sm" href="#" target="_blank" rel="noopener">GitHub</a>
-                <a class="btn btn-sm btn-ghost" href="#" target="_blank" rel="noopener">Docs</a>
-              </div>
+              <div class="card-meta">LLM + Digital Human</div>
+              <h3 class="h3">EEG Interpretation using Large Language Models and Digital Human</h3>
+              <p class="muted">Integrated LLMs, knowledge bases and speech models to interpret EEG patterns and convert technical signals into more understandable clinical sentences.</p>
+              <div class="chip-row"><span class="chip">LLM</span><span class="chip">Knowledge Base</span><span class="chip">Digital Human</span></div>
+              <div class="card-actions"><a class="btn btn-sm" href="#skills">Methods</a><a class="btn btn-sm btn-ghost" href="#experience">Experience</a></div>
+            </div>
+          </article>
+
+          <article class="card project" data-tags="GenAI,Evaluation,Safety,Validation">
+            <img src="assets/ChatGPT Image Oct 10, 2025, 06_12_15 PM.png" alt="LLM evaluation toolkit" />
+            <div class="card-body">
+              <div class="card-meta">Evaluation</div>
+              <h3 class="h3">LLM Evaluation using Deterministic Metrics</h3>
+              <p class="muted">Designed evaluation thinking around reproducible checks such as faithfulness, groundedness, bias, traceability and safety for healthcare AI and clinical documentation workflows.</p>
+              <div class="chip-row"><span class="chip">LLM</span><span class="chip">Groundedness</span><span class="chip">Safety</span></div>
+              <div class="card-actions"><a class="btn btn-sm" href="#skills">Evaluation Skills</a><a class="btn btn-sm btn-ghost" href="#reviewer">Reviewer</a></div>
+            </div>
+          </article>
+
+          <article class="card project" data-tags="GenAI,Multi-Agent,Healthcare,Clinical Documentation">
+            <img src="assets/ChatGPT Image Oct 10, 2025, 06_07_40 PM.png" alt="AI discharge summary and clinical documentation" />
+            <div class="card-body">
+              <div class="card-meta">Clinical Documentation</div>
+              <h3 class="h3">AI-Assisted Clinical Documentation and Discharge Summary Workflows</h3>
+              <p class="muted">Worked on healthcare AI concepts involving clinical documentation, structured templates, terminology mapping, coding support and on-premise LLM workflows for safer clinical information generation.</p>
+              <div class="chip-row"><span class="chip">Clinical NLP</span><span class="chip">Medical Coding</span><span class="chip">LLM</span></div>
+              <div class="card-actions"><a class="btn btn-sm" href="#experience">Experience</a><a class="btn btn-sm btn-ghost" href="#skills">Skills</a></div>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- News -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="h2">Experience</h2>
+            <p>A combined research and industry journey across healthcare AI, analytics, HR technology, software engineering, biometrics and applied machine learning.</p>
+          </div>
+        </div>
+        <div class="experience-grid">
+          <article class="experience-card">
+            <div class="card-meta">Current Research</div>
+            <h3 class="h3">PhD Researcher — Digital Health Innovation and Clinical Informatics Lab, University of South Australia</h3>
+            <ul>
+              <li>Researching CDSS redeployment and portability using VarDiff, SMD and Adaptive Semantic Framework concepts.</li>
+              <li>Working with clinical data differences, terminology mapping, standardisation, metadata alignment, data distribution, validation and human-in-the-loop workflows.</li>
+              <li>Applying Generative AI, graph reasoning, Bayesian networks and multi-agent concepts in clinical decision support and healthcare interoperability.</li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <div class="card-meta">International Research Experience</div>
+            <h3 class="h3">Visiting Researcher — Norwegian University of Science and Technology (NTNU)</h3>
+            <ul>
+              <li>Worked in the area of deepfake detection, biometrics and AI-based identity/security research.</li>
+              <li>Gained exposure to international research practices, experimental evaluation and applied AI research workflows.</li>
+              <li>Strengthened the bridge between machine learning, computer vision and trustworthy AI evaluation.</li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <div class="card-meta">Industry AI & Analytics</div>
+            <h3 class="h3">Industry Experience — PeopleStrong, Altruist Technology and Q3 Technologies</h3>
+            <ul>
+              <li>Worked across multiple industry domains including HR technology, enterprise software, customer/telecom technology, analytics and AI-enabled product development.</li>
+              <li>Built experience in Python, data analytics, machine learning, reporting, automation, API integration and deployment-oriented technical documentation.</li>
+              <li>Developed an applied understanding of how AI systems must fit into real organisational workflows, not just model-level performance.</li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <div class="card-meta">Startup & Product Innovation</div>
+            <h3 class="h3">ArogyaPandit / Tech Adaptive Pandit — Healthcare AI and GenAI Products</h3>
+            <ul>
+              <li>Contributed to healthcare AI product directions involving clinical decision support, OA intelligence, diabetes knowledge graphs, GraphRAG, digital human interaction and multi-agent systems.</li>
+              <li>Worked on translating research ideas into prototypes, dashboards and practical healthcare AI workflows.</li>
+              <li>Focused on combining clinical informatics, medical coding, LLMs, graph AI and explainable AI for safer digital health applications.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="news" class="section alt">
       <div class="container">
         <h2 class="h2">News & Updates</h2>
-
         <div class="timeline">
-          <div class="tl-item">
-
-          <div class="tl-dot"></div>
-            <div class="tl-content">
-              <time>Mar 2026</time>
-              <h3 class="h4">VarDiff: A conceptual model for representing variable differences between CDSSs</h3>
-              <p>Published in <em>Applied Sciences</em>, VarDiff introduces a structured multi-dimensional framework for CDSS redeployment. The framework systematically analyses variable-level differences across shallow, deep, representation, metadata, and data dimensions. Each dimension defines differential possibilities and workflow guidance for comparing variables within one environment or across different source and target healthcare ecosystems. <a href="https://www.mdpi.com/2076-3417/16/7/3331" target="_blank" rel="noopener">Read the paper</a>.</p>
-            </div>
-          </div>  
-
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-content">
-              <time>Aug 2025</time>
-              <h3 class="h4">MedInfo 25 - Clinical Decision Support Systems Redeployment-Levels of Matching Between Variables in Different Ecosystems</h3>
-              <p>Creation of complex AI solutions is laborious and costly. Health organizations are highly diverse, so simple transfer of a solution from one organization to another is typically not viable, and redeployment is necessary. The first step in redeployment process is to determine differences between variables on the source and target system. In our paper we describe 5 dimensions to determine the match: shallow match, deep match, representation match, metadata match and data match.</p>
-            </div>
-          </div>
-
-             <div class="tl-item">         
-            <div class="tl-dot"></div>
-            <div class="tl-content">
-              <time>Aug 2024</time>
-              <h3 class="h4">Health Innovation Community</h3>
-              <p>Gave a talk on CDSS portability across healthcare providers.</p>
-            </div>
-          </div>
-
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-content">
-              <time>Jan 2024</time>
-              <h3 class="h4">HIKM 2024 - Adaptive Semantic Framework for CDSS to a new environment</h3>
-              <p>we propose an Adaptive Semantic Framework (ASF) for CDSS adaptation to a changing environment to overcome the above challenges. The framework includes various methods such as Knowledge-Based Systems (KBS) and Data-Driven Elements (DDE) to adjust the CDSS to new conditions.</p>
-            </div>
-          </div>
-
-
-
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-content">
-              <time>Sept 2023</time>
-              <h3 class="h4">UniSA 23 - Successfully Passed CoC </h3>
-              <p>Analysed the literature, identified the research gaps, proposed methodology, and submitted a research proposal</p>
-            </div>
-          </div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><time>Mar 2026</time><h3 class="h4">VarDiff paper published in Applied Sciences</h3><p>VarDiff introduces a structured multi-dimensional framework for representing variable-level differences between CDSSs. It formalises shallow, deep, representation, metadata and data dimensions for comparing variables within or across healthcare ecosystems. <a class="inline-link" href="https://www.mdpi.com/2076-3417/16/7/3331" target="_blank" rel="noopener">Read the paper</a>.</p></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><time>2026</time><h3 class="h4">Validation of qualitative analysis of the SMD framework</h3><p>Prepared a research manuscript validating the SMD framework through expert survey and interview evidence, focusing on relevance, completeness, ordering and practical applicability.</p></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><time>2026</time><h3 class="h4">Clinical graph validation using weighted score</h3><p>Contributed Generative AI, graph-based modelling and clinical informatics knowledge to Prach's clinical graph validation project using weighted scoring.</p></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><time>Aug 2025</time><h3 class="h4">MedInfo 2025 paper on CDSS redeployment</h3><p>Presented the levels of matching required when redeploying CDSSs across different healthcare ecosystems.</p></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><time>Jan 2024</time><h3 class="h4">Adaptive Semantic Framework for CDSS adaptation</h3><p>Proposed an Adaptive Semantic Framework combining knowledge-based systems and data-driven elements for CDSS adaptation to new environments.</p></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-content"><time>Sept 2023</time><h3 class="h4">Confirmation of Candidature completed</h3><p>Analysed the literature, identified research gaps, proposed the methodology and submitted the research proposal.</p></div></div>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="h2">Skills</h2>
+        <div class="section-head">
+          <div>
+            <h2 class="h2">Skills</h2>
+            <p>Technical, research and healthcare informatics capabilities.</p>
+          </div>
+        </div>
         <div class="skills-grid">
-          <div class="skill">
-            <div class="skill-top">
-              <span>Python</span><span class="skill-level">Expert</span>
-            </div>
-            <div class="bar"><span style="width:90%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top">
-              <span>PySpark</span><span class="skill-level">Advanced</span>
-            </div>
-            <div class="bar"><span style="width:80%"></span></div>
-          </div>
-           <div class="skill">
-            <div class="skill-top">
-              <span>Multi-Agent</span><span class="skill-level">Intermediate</span>
-            </div>
-            <div class="bar"><span style="width:70%"></span></div>
-          </div>
-           <div class="skill">
-            <div class="skill-top">
-              <span>LLM & RAG</span><span class="skill-level">Advanced</span>
-            </div>
-            <div class="bar"><span style="width:80%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top">
-              <span>TensorFlow / PyTorch</span><span class="skill-level">Advanced</span>
-            </div>
-            <div class="bar"><span style="width:80%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top">
-              <span>Clinical Terminologies & Medical Coding (SNOMED CT, ICD-10-AM, SNOMED CT-AU/AM)</span><span class="skill-level">Advanced</span>
-            </div>
-            <div class="bar"><span style="width:85%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top">
-              <span>Healthcare Interoperability Standards (HL7 FHIR, openEHR, OMOP CDM)</span><span class="skill-level">Advanced</span>
-            </div>
-            <div class="bar"><span style="width:82%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top">
-              <span>Laboratory & Unit Standardisation (LOINC, UCUM)</span><span class="skill-level">Advanced</span>
-            </div>
-            <div class="bar"><span style="width:80%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top">
-              <span>UMLS, Ontoserver & Terminology Mapping</span><span class="skill-level">Advanced</span>
-            </div>
-            <div class="bar"><span style="width:80%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top">
-              <span>Bayesian Networks</span><span class="skill-level">Intermediate</span>
-            </div>
-            <div class="bar"><span style="width:65%"></span></div>
-          </div>
+          <div class="skill"><div class="skill-top"><span>Python, Data Analytics and Machine Learning</span><span class="skill-level">Expert</span></div><div class="bar"><span style="width:90%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span>Generative AI, LLMs, RAG and Prompt Engineering</span><span class="skill-level">Advanced</span></div><div class="bar"><span style="width:84%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span>Clinical Decision Support Systems and Redeployment</span><span class="skill-level">Advanced</span></div><div class="bar"><span style="width:88%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span>Healthcare Interoperability Standards: HL7 FHIR, openEHR, OMOP CDM</span><span class="skill-level">Advanced</span></div><div class="bar"><span style="width:82%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span>Terminologies and Coding: SNOMED CT, ICD-10-AM, UMLS</span><span class="skill-level">Advanced</span></div><div class="bar"><span style="width:85%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span>Laboratory and Unit Standards: LOINC, UCUM</span><span class="skill-level">Advanced</span></div><div class="bar"><span style="width:80%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span>Knowledge Graphs, GraphRAG and Clinical Graph Validation</span><span class="skill-level">Advanced</span></div><div class="bar"><span style="width:82%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span>Causal Bayesian Networks and Explainable AI</span><span class="skill-level">Intermediate</span></div><div class="bar"><span style="width:70%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span>PySpark, Big Data and Applied Analytics</span><span class="skill-level">Advanced</span></div><div class="bar"><span style="width:80%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span>Research Writing, Qualitative Validation and Reviewer Experience</span><span class="skill-level">Advanced</span></div><div class="bar"><span style="width:84%"></span></div></div>
         </div>
       </div>
     </section>
 
-    <!-- Interests -->
     <section id="interests" class="section alt">
       <div class="container">
         <h2 class="h2">Research Interests</h2>
         <div class="chip-row">
-          <span class="chip">Clinical Decision Support</span>
-          <span class="chip">Healthcare Interoperability</span>
-          <span class="chip">Generative AI</span>
-          <span class="chip">Knowledge Graphs</span>
-          <span class="chip">HL7 FHIR</span>
-          <span class="chip">openEHR</span>
-          <span class="chip">OMOP CDM</span>
-          <span class="chip">LOINC</span>
-          <span class="chip">SNOMED CT</span>
-          <span class="chip">Medical Coding</span>
-          <span class="chip">Evaluation & Safety</span>
+          <span class="chip">Clinical Decision Support</span><span class="chip">CDSS Redeployment</span><span class="chip">Healthcare Interoperability</span><span class="chip">Generative AI</span><span class="chip">Knowledge Graphs</span><span class="chip">GraphRAG</span><span class="chip">HL7 FHIR</span><span class="chip">openEHR</span><span class="chip">OMOP CDM</span><span class="chip">LOINC</span><span class="chip">SNOMED CT</span><span class="chip">UMLS</span><span class="chip">UCUM</span><span class="chip">Medical Coding</span><span class="chip">Clinical Graph Validation</span><span class="chip">Weighted Scoring</span><span class="chip">Qualitative Validation</span><span class="chip">Evaluation and Safety</span>
         </div>
       </div>
     </section>
 
-    <!-- Reviewer Roles -->
     <section id="reviewer" class="section">
       <div class="container">
-        <h2 class="h2">Reviewer Roles</h2>
+        <div class="section-head"><div><h2 class="h2">Reviewer Roles</h2><p>Academic reviewing across medical informatics, digital health, AI and computing research.</p></div></div>
         <ul class="card-list">
-          <li class="card">
-            <div class="card-body">
-              <div class="card-meta">Journal • BMJ Digital Health</div>
-              <h3 class="h3">BMJ Digital Health</h3>
-              <p class="muted">Reviewed manuscripts in Clinical Decision Support Systems and Healthcare AI.</p>
-            </div>
-          </li>
-          <li class="card">
-            <div class="card-body">
-              <div class="card-meta">Journal • 2024</div>
-              <h3 class="h3">Plos Computing 2025</h3>
-              <p class="muted">Reviewed manuscripts in AI, GenAI, and Analytics</p>
-            </div>
-          </li>
-
-           <li class="card">
-            <div class="card-body">
-              <div class="card-meta">Journal • 2024</div>
-              <h3 class="h3">ACM Computing Survey</h3>
-              <p class="muted">Reviewed manuscripts in AI, GenAI, and Analytics</p>
-            </div>
-          </li>
+          <li class="card"><div class="card-body"><div class="card-meta">Journal • Medical Informatics</div><h3 class="h3">Journal of the American Medical Informatics Association (JAMIA)</h3><p class="muted">Reviewer for manuscripts related to medical informatics, healthcare AI, clinical decision support, interoperability and digital health.</p></div></li>
+          <li class="card"><div class="card-body"><div class="card-meta">Journal • BMJ</div><h3 class="h3">BMJ Digital Health & AI</h3><p class="muted">Reviewer for manuscripts in clinical decision support systems, healthcare AI, digital health and applied informatics.</p></div></li>
+          <li class="card"><div class="card-body"><div class="card-meta">Journal • PLOS</div><h3 class="h3">PLOS</h3><p class="muted">Reviewer for manuscripts in AI, Generative AI, analytics, computational methods and healthcare-related research.</p></div></li>
+          <li class="card"><div class="card-body"><div class="card-meta">Journal • ACM</div><h3 class="h3">ACM Computing Surveys</h3><p class="muted">Reviewer for survey and review manuscripts in AI, Generative AI, analytics and computing research.</p></div></li>
         </ul>
       </div>
     </section>
 
-    <!-- Books -->
     <section id="books" class="section alt">
       <div class="container">
-        <h2 class="h2">Books</h2>
+        <div class="section-head"><div><h2 class="h2">Books</h2><p>Published teaching and technical writing experience.</p></div></div>
         <div class="grid-3">
           <article class="card project">
             <img src="assets/81J-YEJwd+L._SL1500_.jpg" alt="Practical Machine Learning using Apache Spark book cover" />
             <div class="card-body">
+              <div class="card-meta">Book • 2021</div>
               <h3 class="h3">Practical Machine Learning using Apache Spark</h3>
-              <p class="muted">Published on Amazon (2021). 4★ rating. Covers MLlib, pipelines, neural networks, and computer vision.</p>
-              <div class="card-actions">
-                <a class="btn btn-sm" href="https://www.amazon.com.au/Practical-Machine-Learning-Spark-High-Quality/dp/9391392083" target="_blank" rel="noopener">Amazon</a>
-                <a class="btn btn-sm btn-ghost" href="https://www.amazon.com.au/Practical-Machine-Learning-Spark-High-Quality/dp/9391392083" target="_blank" rel="noopener">Sample PDF</a>
-              </div>
+              <p class="muted">Published book covering MLlib, pipelines, neural networks, computer vision and applied machine learning workflows using Apache Spark.</p>
+              <div class="card-actions"><a class="btn btn-sm" href="https://www.amazon.com.au/Practical-Machine-Learning-Spark-High-Quality/dp/9391392083" target="_blank" rel="noopener">Amazon</a></div>
             </div>
           </article>
-          <!-- Add more books as needed -->
         </div>
       </div>
     </section>
 
-    <!-- LinkedIn Blogs -->
     <section id="blogs" class="section">
       <div class="container">
-        <h2 class="h2">LinkedIn Blogs</h2>
-        <ul class="card-list">
-          <li class="card">
-            <div class="card-body">
-              <div class="card-meta">Jul 2025</div>
-              <h3 class="h3"><a href="https://www.linkedin.com/pulse/understanding-ai-healthcare-from-agentic-gourav-g--pemrc/?trackingId=Q0D2nDPGSACM4MNzcgZ7ug%3D%3D" target="_blank" rel="noopener">Understanding AI in Healthcare: From AI to Agentic AI</a></h3>
-              <p class="muted">Understanding AI in Healthcare: From AI to Agentic AI</p>
-            </div>
-          </li>
-          <li class="card">
-            <div class="card-body">
-              <div class="card-meta">April 2025</div>
-              <h3 class="h3"><a href="https://www.linkedin.com/pulse/workflow-mcp-a2a-healthcare-domain-gourav-g--onjec/?trackingId=Q0D2nDPGSACM4MNzcgZ7ug%3D%3D" target="_blank" rel="noopener">Workflow of MCP and A2A in HealthCare Domain</a></h3>
-              <p class="muted">Workflow of MCP and A2A in HealthCare Domain</p>
-            </div>
-          </li>
-          <li class="card">
-            <div class="card-body">
-              <div class="card-meta">Jan 2025</div>
-              <h3 class="h3"><a href="https://www.linkedin.com/pulse/bridging-healthcare-data-gaps-using-llms-unified-terminology-g--y5unc/?trackingId=7kIMLuG2QSWq%2BcZrmkHTQA%3D%3D" target="_blank" rel="noopener">Bridging Healthcare Data Gaps: Using LLMs for Unified Terminology Integration</a></h3>
-              <p class="muted">Bridging Healthcare Data Gaps: Using LLMs for Unified Terminology Integration</p>
-            </div>
-          </li>
-        </ul>
+        <div class="section-head"><div><h2 class="h2">LinkedIn Blogs</h2><p>Short articles and public knowledge-sharing posts on healthcare AI and agentic systems.</p></div></div>
+        <div class="card-list">
+          <article class="card"><div class="card-body"><div class="card-meta">Jul 2025</div><h3 class="h3"><a href="https://www.linkedin.com/pulse/understanding-ai-healthcare-from-agentic-gourav-g--pemrc/?trackingId=Q0D2nDPGSACM4MNzcgZ7ug%3D%3D" target="_blank" rel="noopener">Understanding AI in Healthcare: From AI to Agentic AI</a></h3><p class="muted">Explains the transition from traditional AI to agentic AI in healthcare workflows.</p></div></article>
+          <article class="card"><div class="card-body"><div class="card-meta">Apr 2025</div><h3 class="h3"><a href="https://www.linkedin.com/pulse/workflow-mcp-a2a-healthcare-domain-gourav-g--onjec/?trackingId=Q0D2nDPGSACM4MNzcgZ7ug%3D%3D" target="_blank" rel="noopener">Workflow of MCP and A2A in Healthcare Domain</a></h3><p class="muted">Discusses MCP and agent-to-agent workflows for healthcare use cases.</p></div></article>
+          <article class="card"><div class="card-body"><div class="card-meta">Jan 2025</div><h3 class="h3"><a href="https://www.linkedin.com/pulse/bridging-healthcare-data-gaps-using-llms-unified-terminology-g--y5unc/?trackingId=7kIMLuG2QSWq%2BcZrmkHTQA%3D%3D" target="_blank" rel="noopener">Bridging Healthcare Data Gaps: Using LLMs for Unified Terminology Integration</a></h3><p class="muted">Explores how LLMs can support terminology harmonisation and clinical data gap analysis.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2 class="h2">Frequently Asked View</h2>
+        <p class="muted">This section helps non-specialist readers quickly understand the profile.</p>
+        <details open><summary>What problem does my research address?</summary><p>Healthcare organisations collect similar clinical information in different ways. A CDSS built in one place may fail in another if variable names, definitions, units, metadata or patient populations differ. My research provides a structured way to identify and reason about those differences before redeployment.</p></details>
+        <details><summary>Why do interoperability standards matter here?</summary><p>Standards such as HL7 FHIR, openEHR, OMOP, LOINC, SNOMED CT, UMLS, UCUM and ICD support data exchange, terminology mapping, unit standardisation and medical coding. My work uses them as foundations, while also examining their limits for variable-level CDSS redeployment.</p></details>
+        <details><summary>How does my industry experience support the research?</summary><p>My previous industry roles exposed me to real-world software, analytics, AI and organisational workflows across multiple domains. This helps me design research that is practical, implementation-aware and not limited to algorithmic performance alone.</p></details>
       </div>
     </section>
   </main>
@@ -449,11 +946,86 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© <span id="year"></span> Gourav Gupta</span>
-      <span class="sep">•</span>
+      <span>Built for research communication, healthcare AI and CDSS redeployment.</span>
       <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) root.setAttribute('data-theme', savedTheme);
+
+    document.getElementById('themeToggle')?.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('copyEmail')?.addEventListener('click', async () => {
+      const email = 'gourav.gupta@mymail.unisa.edu.au';
+      try {
+        await navigator.clipboard.writeText(email);
+        document.getElementById('copyEmail').textContent = 'Email copied';
+        setTimeout(() => document.getElementById('copyEmail').textContent = 'Copy email', 1500);
+      } catch (e) {
+        window.location.href = `mailto:${email}`;
+      }
+    });
+
+    function normalise(value) { return (value || '').toLowerCase().trim(); }
+
+    function filterPapers() {
+      const query = normalise(document.getElementById('paperSearch')?.value);
+      const year = document.getElementById('paperYear')?.value || '';
+      const type = document.getElementById('paperType')?.value || '';
+      document.querySelectorAll('.paper-card').forEach(card => {
+        const matchesQuery = !query || normalise(card.textContent).includes(query);
+        const matchesYear = !year || card.dataset.year === year;
+        const matchesType = !type || card.dataset.type === type;
+        card.classList.toggle('hidden', !(matchesQuery && matchesYear && matchesType));
+      });
+    }
+
+    ['paperSearch', 'paperYear', 'paperType'].forEach(id => {
+      document.getElementById(id)?.addEventListener('input', filterPapers);
+      document.getElementById(id)?.addEventListener('change', filterPapers);
+    });
+
+    let activeProjectFilter = 'all';
+    function filterProjects() {
+      const query = normalise(document.getElementById('projectSearch')?.value);
+      document.querySelectorAll('#projectGrid .project').forEach(card => {
+        const tags = normalise(card.dataset.tags);
+        const text = normalise(card.textContent);
+        const matchesQuery = !query || text.includes(query) || tags.includes(query);
+        const matchesTag = activeProjectFilter === 'all' || tags.includes(normalise(activeProjectFilter));
+        card.classList.toggle('hidden', !(matchesQuery && matchesTag));
+      });
+    }
+
+    document.getElementById('projectSearch')?.addEventListener('input', filterProjects);
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        activeProjectFilter = button.dataset.filter || 'all';
+        filterProjects();
+      });
+    });
+
+    const sections = [...document.querySelectorAll('main section[id]')];
+    const navLinks = [...document.querySelectorAll('.nav-link')];
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+        }
+      });
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: 0.01 });
+    sections.forEach(section => observer.observe(section));
+  </script>
 </body>
 </html>
