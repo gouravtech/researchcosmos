@@ -6,50 +6,6 @@
   <title>Research Profile — Gourav Gupta</title>
   <meta name="description" content="Research profile of Gourav Gupta: CDSS redeployment, healthcare interoperability, Generative AI, clinical informatics, publications, projects, experience and reviewer roles." />
   <link rel="icon" href="assets/1684125196895.jpg" />
-
-  <!--
-    Privacy-friendly research profile analytics
-    --------------------------------------------------
-    This profile is prepared for ethical analytics: country-level visits, referral/campaign source,
-    section interactions and clicks on research outputs. It does NOT identify a visitor by name.
-
-    To activate analytics after deployment, create an account with one provider and uncomment ONE block below.
-    Recommended for an academic profile: Plausible, Umami or Cloudflare Web Analytics.
-
-    Personalised opportunity-hunt links can be sent like this:
-      profile.html?source=cambridge_niels_peek&utm_campaign=postdoc_hunt_2026
-      profile.html?source=imperial_brendan_delaney&utm_campaign=postdoc_hunt_2026
-
-    The JavaScript near the bottom will pass these campaign values into your analytics dashboard
-    when Plausible, GA4 or Umami is enabled.
-  -->
-
-  <!-- Option A: Plausible Analytics. Replace YOUR_DOMAIN with your deployed domain and uncomment. -->
-  <!-- <script defer data-domain="YOUR_DOMAIN" src="https://plausible.io/js/script.tagged-events.js"></script> -->
-
-  <!-- Option B: Umami Analytics. Replace YOUR_UMAMI_WEBSITE_ID and uncomment. -->
-  <!-- <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR_UMAMI_WEBSITE_ID"></script> -->
-
-  <!-- Option C: Google Analytics 4. Replace G-XXXXXXXXXX and uncomment both script blocks. -->
-  <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
-  </script>
-  -->
-
-  <script>
-    window.PROFILE_ANALYTICS_SETTINGS = {
-      enabled: true,
-      debug: false,
-      collectPersonalIdentity: false,
-      campaignStorageKey: 'gg_research_profile_campaign',
-      campaignKeys: ['source', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'professor', 'institution', 'country']
-    };
-  </script>
   <style>
     :root {
       --bg: #f6f8f4;
@@ -594,37 +550,6 @@
 
     .hidden { display: none !important; }
 
-
-    .analytics-note {
-      margin-top: 18px;
-      padding: 18px;
-      background: var(--panel);
-      border: 1px dashed var(--border);
-      border-radius: var(--radius-sm);
-      color: var(--muted);
-    }
-
-    .analytics-note strong { color: var(--text); }
-
-    .analytics-code {
-      display: inline-block;
-      padding: 2px 7px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      font-size: 0.86em;
-      font-weight: 700;
-    }
-
-    .footer-privacy {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
     @media (max-width: 980px) {
       .hero-grid, .experience-grid, .skills-grid { grid-template-columns: 1fr; }
       .hero-card { margin: 0; max-width: 250px; }
@@ -684,9 +609,6 @@
             <li>💼 <a href="https://www.linkedin.com/in/gourav-g-8929a560/" target="_blank" rel="noopener">LinkedIn</a></li>
             <li>🐙 <a href="#" target="_blank" rel="noopener">GitHub</a></li>
           </ul>
-          <div class="analytics-note" aria-label="Analytics notice">
-            <strong>Profile analytics:</strong> This profile can track country-level visits, referral source and paper/profile-link clicks after you connect an analytics provider. For opportunity-hunt emails, use personalised links such as <span class="analytics-code">?source=cambridge_niels_peek&utm_campaign=postdoc_hunt_2026</span>. Visitor names are not collected unless they contact you or use a link you intentionally personalised.
-          </div>
           <div class="cta-row">
             <a class="btn" href="#papers">View publications</a>
             <a class="btn btn-ghost" href="#projects">Explore projects</a>
@@ -1091,7 +1013,6 @@
         <details open><summary>What problem does my research address?</summary><p>Healthcare organisations collect similar clinical information in different ways. A CDSS built in one place may fail in another if variable names, definitions, units, metadata or patient populations differ. My research provides a structured way to identify and reason about those differences before redeployment.</p></details>
         <details><summary>Why do interoperability standards matter here?</summary><p>Standards such as HL7 FHIR, openEHR, OMOP, LOINC, SNOMED CT, UMLS, UCUM and ICD support data exchange, terminology mapping, unit standardisation and medical coding. My work uses them as foundations, while also examining their limits for variable-level CDSS redeployment.</p></details>
         <details><summary>How does my industry experience support the research?</summary><p>My previous industry roles exposed me to real-world software, analytics, AI and organisational workflows across multiple domains. This helps me design research that is practical, implementation-aware and not limited to algorithmic performance alone.</p></details>
-        <details><summary>How is profile analytics handled?</summary><p>This website is prepared for privacy-friendly analytics to understand country-level traffic, referral sources, campaign links and engagement with research outputs such as papers, DOI links, Scholar, ORCID, LinkedIn and email. It does not identify a visitor by personal name unless the visitor voluntarily contacts me or uses a personalised link that I shared, such as <span class="analytics-code">?source=cambridge_professor</span>.</p></details>
       </div>
     </section>
   </main>
@@ -1100,7 +1021,6 @@
     <div class="container footer-inner">
       <span>© <span id="year"></span> Gourav Gupta</span>
       <span>Built for research communication, healthcare AI and CDSS redeployment.</span>
-      <span class="footer-privacy">Privacy-friendly analytics ready: country, source and research-output clicks only.</span>
       <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
     </div>
   </footer>
@@ -1180,120 +1100,6 @@
       });
     }, { rootMargin: '-35% 0px -55% 0px', threshold: 0.01 });
     sections.forEach(section => observer.observe(section));
-
-
-    // ------------------------------------------------------------
-    // Privacy-friendly research profile analytics
-    // ------------------------------------------------------------
-    // What this tracks when an analytics provider is enabled:
-    // - page/profile view
-    // - referral or personalised campaign source, e.g. ?source=cambridge_niels_peek
-    // - clicks on research outputs, DOI, Google Scholar, ORCID, LinkedIn, email and buttons
-    // - country/region is provided by the analytics platform using IP geolocation
-    // What this does NOT track:
-    // - personal visitor name by default
-    // - sensitive identity attributes
-    // - exact private identity unless the visitor voluntarily contacts you or uses a personalised link
-
-    const PROFILE_ANALYTICS = window.PROFILE_ANALYTICS_SETTINGS || {};
-
-    function getCampaignContext() {
-      const params = new URLSearchParams(window.location.search);
-      const keys = PROFILE_ANALYTICS.campaignKeys || ['source', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'professor', 'institution', 'country'];
-      const found = {};
-
-      keys.forEach(key => {
-        const value = params.get(key);
-        if (value) found[key] = value.slice(0, 120);
-      });
-
-      const storageKey = PROFILE_ANALYTICS.campaignStorageKey || 'research_profile_campaign';
-      if (Object.keys(found).length) {
-        found.first_seen_at = new Date().toISOString();
-        localStorage.setItem(storageKey, JSON.stringify(found));
-        return found;
-      }
-
-      try {
-        return JSON.parse(localStorage.getItem(storageKey) || '{}');
-      } catch (e) {
-        return {};
-      }
-    }
-
-    function cleanAnalyticsValue(value) {
-      return String(value || '')
-        .replace(/\s+/g, ' ')
-        .trim()
-        .slice(0, 160);
-    }
-
-    function getElementSection(element) {
-      const section = element.closest('section[id], header, footer');
-      if (!section) return 'unknown';
-      if (section.id) return section.id;
-      return section.tagName.toLowerCase();
-    }
-
-    function getInteractionType(element) {
-      const href = element.getAttribute('href') || '';
-      if (element.tagName.toLowerCase() === 'button') return 'button';
-      if (href.startsWith('mailto:')) return 'email';
-      if (href.startsWith('#')) return 'internal_navigation';
-      if (/doi\.org|mdpi\.com|sagepub|iospress|dl\.acm\.org/i.test(href)) return 'paper_or_doi';
-      if (/scholar\.google|orcid|linkedin|github/i.test(href)) return 'profile_link';
-      return 'external_link';
-    }
-
-    function trackProfileEvent(eventName, properties = {}) {
-      if (!PROFILE_ANALYTICS.enabled) return;
-      const campaign = getCampaignContext();
-      const payload = {
-        ...campaign,
-        ...properties,
-        page_path: window.location.pathname,
-        page_title: document.title
-      };
-
-      // Plausible custom event support.
-      if (typeof window.plausible === 'function') {
-        window.plausible(eventName, { props: payload });
-      }
-
-      // Google Analytics 4 custom event support.
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', eventName.toLowerCase().replace(/\s+/g, '_'), payload);
-      }
-
-      // Umami custom event support.
-      if (window.umami && typeof window.umami.track === 'function') {
-        window.umami.track(eventName, payload);
-      }
-
-      if (PROFILE_ANALYTICS.debug) {
-        console.info('[ResearchProfileAnalytics]', eventName, payload);
-      }
-    }
-
-    const campaignContext = getCampaignContext();
-    trackProfileEvent('Research Profile Viewed', {
-      has_personalised_source: Boolean(campaignContext.source || campaignContext.professor || campaignContext.institution),
-      referrer: document.referrer ? new URL(document.referrer).hostname : 'direct'
-    });
-
-    document.querySelectorAll('a[href], button').forEach(element => {
-      element.addEventListener('click', () => {
-        const href = element.getAttribute('href') || '';
-        const label = cleanAnalyticsValue(element.getAttribute('data-analytics-label') || element.textContent || element.getAttribute('aria-label') || href);
-        trackProfileEvent('Research Profile Interaction', {
-          label,
-          section: getElementSection(element),
-          interaction_type: getInteractionType(element),
-          target: cleanAnalyticsValue(href || element.id || element.className)
-        });
-      });
-    });
-
   </script>
 </body>
 </html>
